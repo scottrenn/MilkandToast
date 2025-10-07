@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="center-feed">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% assign thumb = post.thumb | default: post.image %}
+      <li class="post-card">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {% if thumb %}
+            <img class="home-thumb" src="{{ thumb | relative_url }}" alt="{{ post.title | escape }}">
+          {% endif %}
+          <h2 class="post-card-title">{{ post.title | escape }}</h2>
+        </a>
+
+        {% if post.subtitle %}
+          <p class="post-subtitle">{{ post.subtitle }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

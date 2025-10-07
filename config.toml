@@ -1,0 +1,7 @@
+title: "Milk and Toast"
+description: "A cozy corner of the internet"
+theme: minima
+	sass:
+		style: compressed
+logo: /assets/images/logo.png
+show_excerpts: true

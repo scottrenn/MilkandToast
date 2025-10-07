@@ -1,0 +1,23 @@
+<article class="post-card">
+  <a class="post-card__image-wrapper{% if page.sepia_thumbs %} sepia{% endif %}"
+     href="{{ post.url | relative_url }}"
+     aria-label="{{ post.title | escape }}">
+    {% if post.thumbnail %}
+      <img class="post-card__image"
+           src="{{ post.thumbnail | relative_url }}"
+           alt="{{ post.thumb_alt | default: post.title | escape }}">
+    {% endif %}
+  </a>
+
+  <div class="post-card__body">
+    <h2 class="post-card__title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    {% if post.excerpt %}
+      <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    {% endif %}
+    <time class="post-card__meta" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: site.minima.date_format | default: "%b %-d, %Y" }}
+    </time>
+  </div>
+</article>
