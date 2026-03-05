@@ -1,0 +1,8 @@
+<article class="list-view{{ with .Section }} list-view--{{ . | urlize }}{{ end }}">
+<header>
+<p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
+<h2 class="title mt--s"><a href="{{ .RelPermalink }}">{{ .Title }}{{ with .Description }} <span class="post-subtitle">{{ . }}</span>{{ end }}</a></h2>
+</header>
+{{ .Summary }}
+<a class="read-more" href="{{ .RelPermalink }}">Continue reading →</a>
+</article>

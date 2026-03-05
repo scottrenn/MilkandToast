@@ -1,0 +1,130 @@
+/* Site custom styles and colours. This file loads last. */
+
+/* Override colours like this
+:root {
+  --color-brand: red;
+  --color-brand-alt: blue;
+  --color-brand-dark: green;
+}
+*/
+
+.header {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.header__logo {
+    margin: 0 auto;
+}
+
+.main-menu {
+    text-align: center;
+}
+
+.main-menu ul {
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap');
+
+body {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+.layout__page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.layout__page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Title styling */
+.single-page h1 {
+    font-weight: 700;
+}
+
+.single-page h1::after {
+    content: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Style the colon-separated subtitle in lighter weight */
+h1 .subtitle,
+h1 em {
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Post list */
+.list-view {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #d4c9b8;
+}
+
+.list-view:last-child {
+    border-bottom: none;
+}
+
+.list-view .title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-view .title a:hover {
+    text-decoration: underline;
+}
+
+/* Post date */
+.post-date {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9a8f82;
+    margin-bottom: 0.25rem;
+}
+
+/* Post date - sans serif */
+.post-date {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.post-subtitle {
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Image treatment */
+.single-view img {
+    filter: sepia(40%) saturate(80%);
+    max-width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+/* Full sepia for list view too */
+.list-view img {
+    filter: sepia(100%);
+    max-width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.single-view img {
+    filter: sepia(100%);
+}
